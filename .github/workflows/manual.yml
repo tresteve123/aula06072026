@@ -43,4 +43,6 @@ jobs:
     - name: Criar Pasta
       #run: echo "Hello ${{ inputs.name }}"
       run: mkdir "${{ inputs.name }}-${{ inputs.ambiente }}"
+    - name: Ver a versão de Python
+      run: python --version
       
