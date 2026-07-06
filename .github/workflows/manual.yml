@@ -45,4 +45,9 @@ jobs:
       run: mkdir "${{ inputs.name }}-${{ inputs.ambiente }}"
     - name: Ver a versão de Python
       run: python --version
-      
+    - name: Ver a versão de Python
+      run: |
+        python --version
+        ls -all
+        echo "print("Hello")" > hello.py
+        python hello.py
