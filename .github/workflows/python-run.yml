@@ -50,8 +50,8 @@ jobs:
     # Runs a single command using the runners shell
     - name: Criar a Pasta
       run: |
-        mkdir "${{ inputs.nome_pasta }}
+        mkdir "${{ inputs.nome_pasta }}"
         cd "${{ inputs.nome_pasta }}"
-        echo "print(${{ inputs.mensagem }})" > ${{ inputs.nome_ficheiro }}
-        python ${{ inputs.nome_ficheiro}}
+        echo "print(${{ inputs.mensagem }})" > "${{ inputs.nome_ficheiro }}"
+        python "${{ inputs.nome_ficheiro}}"
         echo "${{ inputs.nome_pasta }}-${{ inputs.nome_ficheiro }}-${{ inputs.mensagem }}"
