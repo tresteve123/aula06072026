@@ -49,5 +49,5 @@ jobs:
       run: |
         python --version
         ls -all
-        echo "print("Hello")" > hello.py
+        echo "print('Hello')" > hello.py
         python hello.py
