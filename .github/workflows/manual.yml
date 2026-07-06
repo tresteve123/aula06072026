@@ -18,7 +18,17 @@ on:
         # The data type of the input
         type: string
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+      ambiente:
+        # Friendly description to be shown in the UI instead of 'name'
+        description: 'Ambiente'
+        # Default value if no value is explicitly provided
+        default: 'TESTE'
+        # Input has to be provided for the workflow to run
+        required: true
+        #False significa que o input pode ser deixado em branco
+        # The data type of the input
+        type: string
+        # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "greet"
   # greet: Vamos substituir por:
@@ -32,5 +42,5 @@ jobs:
     # Runs a single command using the runners shell
     - name: Criar Pasta
       #run: echo "Hello ${{ inputs.name }}"
-      run: mkdir "${{ inputs.name }}"
+      run: mkdir "${{ inputs.name }}-${{ inputs.ambiente }}"
       
